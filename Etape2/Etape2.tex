@@ -1,0 +1,91 @@
+%----------------------------------------------------
+%----------------   Trame Semaine 1  ----------------
+%----------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}   %--- package pour les accents
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}      %--- package pour la langue
+\usepackage{multicol}           %--- package pour plusieurs colonnes
+\usepackage{graphicx}           %--- package pour inclure des figures
+
+
+
+%--------------
+\begin{document}
+
+  \title{Titre du projet - Etat de l'art}
+  \author{Auteurs}
+  \maketitle
+
+
+%----------------------------
+\tableofcontents
+
+%----------------------------
+\section{Introduction}
+
+Décrire la problématique de votre projet. 
+Introduire la catégorisation de vos articles.
+
+
+%----------------------------
+\section{Etat de l'art}
+
+Rédiger l'état de l'art de votre recherche bibliographique en vous appuyant sur la catégorisation. 
+
+Les références bibliographiques sont à mettre dans un fichier {\tt bib} au format {\tt bibtex}. 
+Pour les citer, utiliser {\tt $\backslash$cite}. 
+La bibliography se génère à la fin du document avec les commandes {\tt bibliographystyle} et {\tt bibliography}. 
+
+Vous trouverez dans le fichier {\tt example.bib} des exemples de format pour un livre 
+("Pour plus d'informations sur le référencement, consulter \cite{latexcompanion}"), 
+un article de revue \cite{einstein}, un article de conférence\cite{viaud}, 
+une thèse\cite{theseguillas}, un site web\cite{hal}.
+
+
+\subsection{Catégorisation 1}
+
+\subsubsection{Sous-catégorisation}
+
+\subsection{Catégorisation 2}
+
+\subsection{Catégorisation 3}
+
+
+
+Illustrer avec un tableau comparatif
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|p{2 cm}|}\hline
+& type de méthode & complexité &  \\\hline
+article \cite{latexcompanion} & 1 & $O(n)$ & résultats intéressants \\\hline
+article \cite{latexcompanion} & 2 & $O(nm)$ & méthode pas claire \\\hline
+\end{tabular} 
+\end{center}
+
+La figure \ref{fig} représente des exemples de tableaux comparatifs extraits de l'état de l'art d'une thèse \cite{theseguillas}.
+Les figures sont des éléments flottants que latex peut positionner sur n'importe quelle page. 
+Pour le référencement des figures, utiliser {\tt label} et {\tt ref}. 
+
+
+\begin{figure}
+\includegraphics[width=0.40\textwidth]{ExempleTableau.png} \hspace*{2 cm}
+\includegraphics[width=0.40\textwidth]{ExempleTableau.png} \hspace*{2 cm}
+\caption{Exemples de tableaux comparatifs extraits de \cite{theseguillas}\label{fig}}
+\end{figure}
+
+
+%----------------------------
+\section{Conclusion}
+
+
+
+
+\bibliographystyle{alpha}
+%\bibliographystyle{apalike}
+%\bibliographystyle{plain}
+\bibliography{example}
+
+\end{document}
